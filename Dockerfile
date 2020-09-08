@@ -7,5 +7,6 @@ RUN cd /root && \
     tar -xf frp_${VERSION}_linux_amd64.tar.gz && \
     mv frp_${VERSION}_linux_amd64 /usr/local/frp && \
     rm /root/frp_${VERSION}_linux_amd64.tar.gz
-EXPOSE 7000
+COPY ./frps.ini /usr/local/frp/frps.ini
+EXPOSE 7000 7500
 CMD ["/usr/local/frp/frps", "-c", "/usr/local/frp/frps.ini"]
