@@ -1,5 +1,5 @@
 FROM alpine
-ARG VERSION=0.33.0
+ARG VERSION=0.43.0
 
 RUN apk update && apk add wget
 RUN cd /root && \
